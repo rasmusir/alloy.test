@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title name="title" active>Alloy test</title>
-        <script src="/Alloy/alloy.js"> </script>
+        <script src="/alloy/alloy.js"> </script>
         <link rel="stylesheet" href="/style.css" type="text/css">
     </head>
     <body>
@@ -14,14 +14,16 @@
             <a name="kontaktbutton" href="/kontakt" active>Kontakt</a>
         </nav>
         <div class="body">
-            <div id="content" name="content" active>
+            <main id="content" name="content" active>
                 Hej!, det här är min startsida! Du suger.
                 <.*?\s(type\s*=\s*"template\/text"|active\b).*?>
                 Hello
                 
                 .Hej hej på dig dig.
-            </div>
+            </main>
         </div>
+        
+        
         
         <script>
             
@@ -32,8 +34,11 @@
             }
         </script>
         
-        <script type="template/text">
-            alert("Hello");
+        <script type="template/html" name="template" active>
+            <div class="item">
+                <div name="title" active> testing </div>
+                <img src="http://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17011_ip.jpg" name="image" active>
+            </div>
         </script>
     </body>
 </html>

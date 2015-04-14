@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-require("Alloy/View.php");
+require("alloy/View.php");
 
 use Alloy\View;
 
@@ -30,7 +30,17 @@ function Home()
     global $view;
     resetbuttons();
     
-    $view->SetData("content","<a href=\"/kontakt/rasmus\">Rasmus Israelsson</a>");
+    $template = $view->GetTemplate("template");
+    $template->SetData("title","Test");
+    
+    
+    $template2 = $view->GetTemplate("template");
+    $template2->SetData("title","Test two");
+    $template2->SetAttribute("image","src","http://www.online-image-editor.com//styles/2014/images/example_image.png");
+    
+    $view->SetAppend("content",true);
+    $view->AddData("content",$template);
+    $view->AddData("content",$template2);
     $view->SetData("title","Alloy - Hem");
     
     $view->SetAttribute("homebutton","class","active");

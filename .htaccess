@@ -1,5 +1,5 @@
 DirectorySlash Off
-DirectoryIndex Alloy/route.php
+DirectoryIndex alloy/route.php
 
 RewriteEngine On
 
@@ -9,4 +9,4 @@ RewriteRule  .*$  -  [L]
 RewriteCond %{REQUEST_FILENAME}  -f
 RewriteRule  .*$  -  [L]
 
-RewriteRule .*$    Alloy/route.php [L]
+RewriteRule .*$    alloy/route.php [L]
